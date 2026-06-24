@@ -1,81 +1,70 @@
-# American Option Pricing - Midterm Repository
+# SOC DeepQuant - American Option Pricing
 
-This repository tracks my work for the American Option Pricing SOC project.
+This repository contains my week-by-week work for the American Option Pricing
+SOC project. Each assignment is kept in its own folder so the midterm submission
+is easy to review.
 
-The first four weeks cover option basics, Black-Scholes pricing, binomial trees,
-and a coded CRR baseline for American put pricing. The midterm submission will
-include written reports, reproducible Python code, tests, and generated figures.
+## Week-by-Week Structure
 
-## Current Scope
-
-| Week | Topic | Main Deliverable | Status |
+| Week | Topic | Folder | Deliverable |
 | --- | --- | --- | --- |
-| 1 | Basics of Options | Real-world options advisory memo | Complete |
-| 2 | Black-Scholes | Pricing memo and model calculation | Complete |
-| 3 | Binomial Model | Hand-worked American put tree | Complete |
-| 4 | Code the Baseline | CRR American put pricer, tests, plots | Complete |
+| 1 | Basics of Options | `weeks/week1/` | Options advisory memo |
+| 2 | Black-Scholes | `weeks/week2/` | Black-Scholes pricing memo |
+| 3 | Binomial Model | `weeks/week3/` | Hand-worked American put tree |
+| 4 | Code the Baseline | `weeks/week4/` | CRR pricer, tests, figures, report |
 
 ## Repository Layout
 
 ```text
 .
-├── data/              # Input data, if needed
-├── figures/           # Saved plots for reports
-├── notebooks/         # Exploratory notebooks
-├── reports/           # Weekly written reports
-├── scripts/           # Reproducible output and sanity-check scripts
-├── src/               # Reusable pricing code
-├── tests/             # Unit and sanity tests
-├── requirements.txt   # Python dependencies
-└── README.md
+|-- weeks/
+|   |-- week1/
+|   |   `-- report.md
+|   |-- week2/
+|   |   `-- report.md
+|   |-- week3/
+|   |   `-- report.md
+|   `-- week4/
+|       |-- report.md
+|       |-- src/
+|       |   `-- crr.py
+|       |-- tests/
+|       |   `-- test_crr.py
+|       |-- scripts/
+|       |   |-- generate_week4_outputs.py
+|       |   `-- run_sanity_checks.py
+|       `-- figures/
+|           |-- week4_exercise_boundary.svg
+|           `-- week4_price_surface.svg
+|-- requirements.txt
+`-- README.md
 ```
 
-## Planned Week 4 API
+## Week 4 Reproducibility
 
-```python
-crr_put_price(S0, K, T, r, sigma, steps, american=True)
-```
-
-The implementation will use the Cox-Ross-Rubinstein binomial tree with backward
-induction. For American puts, each node will compare continuation value with
-immediate exercise value.
-
-## Reproducibility
-
-Install dependencies:
+Install dependencies from the repository root:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run tests with pytest:
+Run the Week 4 sanity checks:
 
 ```bash
-pytest
+python weeks/week4/scripts/run_sanity_checks.py
 ```
 
-Run dependency-light sanity checks:
+Regenerate the Week 4 figures and convergence output:
 
 ```bash
-python scripts/run_sanity_checks.py
+python weeks/week4/scripts/generate_week4_outputs.py
 ```
 
-Regenerate Week 4 outputs:
+Run the Week 4 pytest suite:
 
 ```bash
-python scripts/generate_week4_outputs.py
+python -m pytest weeks/week4/tests
 ```
-
-## Midterm Checklist
-
-- [x] Week 1 report completed
-- [x] Week 2 report completed
-- [x] Week 3 calculations completed and checked
-- [x] Week 4 pricer implemented
-- [x] Tests passing
-- [x] Figures generated
-- [x] README updated with final results
-- [ ] GitHub repository submitted
 
 ## Key Week 4 Results
 

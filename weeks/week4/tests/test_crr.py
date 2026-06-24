@@ -1,3 +1,9 @@
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
 from src.crr import crr_put_price
 
 
@@ -23,4 +29,3 @@ def test_put_value_increases_with_volatility():
 def test_american_put_above_intrinsic_value():
     price = crr_put_price(70, 100, 1.0, 0.05, 0.25, 300, american=True)
     assert price >= 30
-
