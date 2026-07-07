@@ -1,0 +1,13 @@
+{
+  "n_contracts": 10000,
+  "label_steps": 100,
+  "test_mae": 1.8437430210389802,
+  "test_rmse": 2.3319376628200015,
+  "test_max_abs_error": 9.770308535913635,
+  "test_bias": 0.13469067408076144,
+  "bucket_mae": {
+    "deep_itm_put_S_over_K_below_0.9": 2.0984511594583686,
+    "near_atm_0.9_to_1.1": 1.6433623873662808,
+    "deep_otm_put_S_over_K_above_1.1": 1.7300196713010938
+  }
+}

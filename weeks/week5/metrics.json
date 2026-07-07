@@ -1,0 +1,15 @@
+{
+  "linear_regression": {
+    "w": 2.4989851121148985,
+    "b": 0.941328002679327,
+    "train_mse": 0.7470137157642961,
+    "val_mse": 1.051699829549327
+  },
+  "tiny_relu_net": {
+    "val_mae": 0.33217828683949724,
+    "max_abs_error": 1.1290481325998156,
+    "final_train_mse": 0.1542665082598674,
+    "final_val_mse": 0.16834668434944727
+  },
+  "seed_notes": "Linear seed=42, ReLU seed=7"
+}

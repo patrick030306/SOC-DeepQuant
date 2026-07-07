@@ -1,0 +1,26 @@
+{
+  "binomial_benchmark": {
+    "method": "CRR binomial tree",
+    "american_put_price": 7.972371262310154,
+    "role": "reference price and exercise intuition"
+  },
+  "neural_network": {
+    "method": "two-hidden-layer NumPy MLP",
+    "contracts": 10000,
+    "label_steps": 100,
+    "test_mae": 1.8437430210389802,
+    "test_rmse": 2.3319376628200015,
+    "test_max_abs_error": 9.770308535913635,
+    "bias": 0.13469067408076144
+  },
+  "rl_policy": {
+    "method": "tabular Q-learning",
+    "training_episodes": 12000,
+    "learned_value": 5.267338966699144,
+    "learned_standard_error": 0.06607885986178409,
+    "always_hold_value": 7.255322046714389,
+    "exercise_rate": 0.7624,
+    "average_exercise_step": 22.2888
+  },
+  "conclusion": "Binomial tree is the reliable benchmark; NN approximation is usable but imperfect; tabular RL is a prototype and exercises too early."
+}

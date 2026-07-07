@@ -1,0 +1,45 @@
+{
+  "contract": {
+    "S0": 100,
+    "K": 100,
+    "T": 1.0,
+    "r": 0.05,
+    "sigma": 0.25,
+    "steps": 50
+  },
+  "training": {
+    "method": "tabular Q-learning",
+    "episodes": 12000,
+    "seed": 91,
+    "alpha": 0.08
+  },
+  "binomial_benchmark_500_steps": 7.972371262310154,
+  "always_hold": {
+    "episodes": 5000,
+    "mean_discounted_payoff": 7.255322046714389,
+    "standard_error": 0.15213071886717333,
+    "exercise_rate": 0.0,
+    "average_exercise_step": 50.0
+  },
+  "immediate_exercise": {
+    "episodes": 5000,
+    "mean_discounted_payoff": 0.0,
+    "standard_error": 0.0,
+    "exercise_rate": 1.0,
+    "average_exercise_step": 0.0
+  },
+  "random": {
+    "episodes": 5000,
+    "mean_discounted_payoff": 0.8987606151891594,
+    "standard_error": 0.030459101135733992,
+    "exercise_rate": 1.0,
+    "average_exercise_step": 1.0264
+  },
+  "learned_tabular_q": {
+    "episodes": 5000,
+    "mean_discounted_payoff": 5.267338966699144,
+    "standard_error": 0.06607885986178409,
+    "exercise_rate": 0.7624,
+    "average_exercise_step": 22.2888
+  }
+}

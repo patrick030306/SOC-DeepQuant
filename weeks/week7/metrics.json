@@ -1,0 +1,55 @@
+{
+  "sample_episodes": [
+    {
+      "episode": 0,
+      "reason": "exercise",
+      "step": 1,
+      "reward": 0.0
+    },
+    {
+      "episode": 1,
+      "reason": "exercise",
+      "step": 2,
+      "reward": 4.387831484606821
+    },
+    {
+      "episode": 2,
+      "reason": "exercise",
+      "step": 0,
+      "reward": 0.0
+    },
+    {
+      "episode": 3,
+      "reason": "exercise",
+      "step": 0,
+      "reward": 0.0
+    },
+    {
+      "episode": 4,
+      "reason": "exercise",
+      "step": 1,
+      "reward": 0.0
+    }
+  ],
+  "always_hold": {
+    "episodes": 1000,
+    "mean_discounted_payoff": 6.94389021530854,
+    "standard_error": 0.3346006654862524,
+    "exercise_rate": 0.0,
+    "average_exercise_step": 50.0
+  },
+  "immediate_exercise": {
+    "episodes": 1000,
+    "mean_discounted_payoff": 0.0,
+    "standard_error": 0.0,
+    "exercise_rate": 1.0,
+    "average_exercise_step": 0.0
+  },
+  "random": {
+    "episodes": 1000,
+    "mean_discounted_payoff": 0.9315871054925655,
+    "standard_error": 0.06909455327025947,
+    "exercise_rate": 1.0,
+    "average_exercise_step": 1.041
+  }
+}
